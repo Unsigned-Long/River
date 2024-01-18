@@ -28,8 +28,6 @@ If you use ***River*** in a scientific publication, please cite the following  p
 
 Continuous and reliable ego-velocity information is significant for high-performance motion control and planning in a variety of robotic tasks, such as autonomous navigation and exploration. While linear velocities as first-order kinematics can be simultaneously estimated with other states or explicitly obtained by differentiation from positions in ego-motion estimators such as odometers, the high coupling leads to instability and even failures when estimators degenerate. To this end, we present \emph{River}: an accurate and continuous linear velocity estimator that efficiently fuses high-frequency inertial and radar target measurements based on continuous-time optimization. Specifically, a dynamic initialization procedure is first performed to rigorously recover the initials of states, followed by batch estimations, where the velocity and rotation B-splines would be optimized incrementally to provide continuous body-frame velocity estimates. Results from both simulated and real-world experiments demonstrate that \emph{River} is capable of high accuracy, repeatability, and consistency for ego-velocity estimation. We open-source our implementations here to benefit the research community.
 
-https://github.com/Unsigned-Long/River/assets/76953144/c0503652-552d-4538-aefb-6d73d00c0180
-
 
 ## 2. Build River
 
