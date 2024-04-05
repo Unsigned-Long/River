@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+    <node pkg="river" type="river_simu" name="river_simu_node" output="screen">
+        <param name="output_path" value="$(find river)/dataset/simu-high-dynamic/simulation" type="string"/>
+        <!-- attention: such stationary boot is not required in River benefit from the dynamic initialization -->
+        <param name="stationary_duration" value="5.0" type="double"/>
+        <!-- keep moving for 120.0 seconds -->
+        <param name="motion_duration" value="120.0" type="double"/>
+        <!-- the spatiotemporal parameters from radar to imu: [qx;qy;qz;qw;px;py;pz;tm] -->
+        <param name="extri_temp_params" value="0.0;0.0;0.0;1.0;0.05;0.1;0.15;0.01" type="string"/>
+        <!-- the measurement frequency of the imu and radar: [imu;radar] -->
+        <param name="frequency" value="400;600" type="string"/>
+        <!-- the noise density of accelerator, gyroscope (sigma), and radar  -->
+        <param name="noise" value="0.005;0.002;0.02" type="string"/>
+        <!-- the constant bias of accelerator and gyroscope -->
+        <param name="bias" value="0.01;0.005" type="string"/>
+    </node>
+</launch>

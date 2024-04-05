@@ -1,0 +1,6 @@
+[submodule "CTraj"]
+	path = CTraj
+	url = https://github.com/Unsigned-Long/CTraj.git
+[submodule "thirdparty/ctraj"]
+	path = thirdparty/ctraj
+	url = https://github.com/Unsigned-Long/CTraj.git

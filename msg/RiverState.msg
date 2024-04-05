@@ -1,0 +1,7 @@
+Header header
+geometry_msgs/Vector3 velocity_in_world
+geometry_msgs/Vector3 velocity_in_body
+geometry_msgs/Quaternion quaternion
+float32 velocity_norm
+float32 acce_bias_norm
+float32 gyro_bias_norm

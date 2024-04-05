@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+
+    <node pkg="river" type="river_prog" name="river_prog_node" output="screen">
+        <!-- change the value of this field to the path of your self-defined config file -->
+        <param name="config_path" value="$(find river)/dataset/xrio/basement/config.yaml" type="string"/>
+    </node>
+    
+    <!-- config the ros bag path -->
+    <arg name="rosbag_path" value="/home/csl/dataset/x-rio/multi_radar_inertial_datasets_jgn_2022/basement.bag"/>
+
+    <!-- start time -->
+    <!-- valid start time of this bag: 50 -->
+    <!-- valid   end time of this bag: 400 -->
+    <arg name="start_time" value="50"/>
+
+    <!-- ================================== -->
+    <!-- only publish the interested topics -->
+    <!-- ================================== -->
+<!--     <arg name="imu_topic" value="/imu1/frame"/> -->
+<!--     <arg name="radar_topic" value="/radar2/scan"/> -->
+
+    <!-- ================== -->
+    <!-- publish all topics -->
+    <!-- ================== -->
+    <node pkg="rosbag" type="play" name="play" args="$(arg rosbag_path) -s $(arg start_time)"/>
+
+    <node pkg="plotjuggler" type="plotjuggler" name="plotjuggler"
+          args="-l $(find river)/config/plotjuggler.xml"/>
+</launch>

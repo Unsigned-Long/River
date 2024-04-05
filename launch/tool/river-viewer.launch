@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+
+    <node pkg="river" type="river_viewer" name="river_viewer_node" output="screen">
+        <param name="view_path" value="/home/csl/ros_ws/river/src/river/dataset/data_2023926155612/1699257003257234202.view" type="string"/>
+        <!--  'Viewer':1, 'MultiViewer':2, wrong viewer type would lead to unexpected results -->
+        <param name="view_type" value="1" type="int"/>
+    </node>
+</launch>
