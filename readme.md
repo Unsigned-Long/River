@@ -111,8 +111,9 @@ Our accompanying videos are now available on **YouTube** (click below images to 
   catkin_make -DCATKIN_WHITELIST_PACKAGES=""
   ```
 
-
 ## 3. Launch River
+
+**Attention**: to create a virtual reality (**VR**) perspective of the IMU (left window view in runtime), you have to change the model file path in configure field (`Preference::ObjFileForDispla`y) to `{root path}/river/model/river.obj`. For a better VR perspective, you can design your own simulation scenario using `Blender` and export it as an `obj` file, then pass it to the configure file.
 
 ### 3.1 Simulation Test
 
