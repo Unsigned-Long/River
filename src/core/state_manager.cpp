@@ -561,7 +561,7 @@ namespace ns_river {
         auto &velSpline = splines->GetRdSpline(Configor::Preference::VelSpline);
 
         auto [acceMean, acceVar] = DataManager::AcceMeanVar(imuData);
-        double velocity = velSpline.Evaluate(status.ValidStateEndTime).norm();
+        double velocity = velSpline.Evaluate(status.ValidStateEndTime - 1E-3).norm();
         // spdlog::info(
         //         "Gravity-removed acceleration average: {:.6f}, variance: {:.6f},  velocity: {:.6f}",
         //         std::abs(acceMean.norm() - configor->prior.GravityNorm), acceVar.diagonal().norm(), velocity
