@@ -125,7 +125,7 @@ Our accompanying videos are now available on **YouTube** (click below images to 
 
 ### 3.3 Skip Tutorial
 
-Find a **configure file** in `/river/dataset`, then **change the fields** in the configure files to be compatible with your dataset (there are detailed comments for each field). You only need to change a few fields related to io (input and output), perhaps some additional fields related to optimization.
+Find a **configure file** in `river/dataset`, then **change the fields** in the configure files to be compatible with your dataset (there are detailed comments for each field). You only need to change a few fields related to io (input and output), perhaps some additional fields related to optimization.
 
 Then **give the path of your configuration file to the launch file** of `river` in folder `river/launch` (handheld, xrio, or simu-test folder), Then, we **launch** '`river`':
 

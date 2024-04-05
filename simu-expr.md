@@ -38,8 +38,8 @@ this would generate a simulated rosbag and some related ground-truth files:
 + `rotation.json` and `velocity.json`: the sampled rotations and velocities based on the b-splines, you can use python scripts we provided in `river/scripts`, i.e., `rot_spline_drawer.py` and `vel_spline_drawer.py`, to visualize them:
 
   <div align=center>
-      <img src="docs/img/rotation.png" width =100%>
-      <img src="docs/img/velocity.png" width =100%>
+      <img src="docs/img/rotation.png" width =80%>
+      <img src="docs/img/velocity.png" width =80%>
   </div>
 
 The next steps are simple, just modify the file paths of the ros bag in the configuration file `config-simu.yaml` in `river/dataset/simu-high-dynamic/`, and then configure the launch file of `River`, i.e., `river-prog-simu-high-dynamic.launch` in the `launch/simu-test` folder. Then, we launch '`River`':
@@ -49,5 +49,5 @@ roslaunch river river-prog-simu-high-dynamic.launch
 ```
 
 <div align=center>
-    <img src="docs/img/shot5.png" width =100%>
+    <img src="docs/img/shot5.png" width =80%>
 </div>
