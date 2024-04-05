@@ -23,4 +23,24 @@
 *.toc
 
 *.json
-/dataset/
+
+/dataset/handheld/*
+!/dataset/handheld/config.yaml
+
+/dataset/simu-high-dynamic/*
+!/dataset/simu-high-dynamic/config-simu.yaml
+
+/dataset/simu-low-dynamic/*
+!/dataset/simu-low-dynamic/config-simu.yaml
+
+/dataset/xrio/basement/*
+!/dataset/xrio/basement/config.yaml
+
+/dataset/xrio/lab_floor/*
+!/dataset/xrio/lab_floor/config.yaml
+
+/dataset/xrio/office_floor/*
+!/dataset/xrio/office_floor/config.yaml
+
+/dataset/xrio/workshop/*
+!/dataset/xrio/workshop/config.yaml

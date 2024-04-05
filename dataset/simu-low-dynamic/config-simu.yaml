@@ -1,0 +1,52 @@
+Configor:
+  DataStream:
+    IMUTopic: /simu_imu/frame
+    # Supported IMU message types are:
+    #   1. SENSOR_IMU: https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html
+    #   2. SBG_IMU: https://github.com/SBG-Systems/sbg_ros_driver.git
+    #   3. ...
+    IMUMsgType: SENSOR_IMU
+    RadarTopic: /simu_radar/scan
+    # RadarTopic: "/radar2/scan"
+    # Supported radar message types are:
+    #   1.    AWR1843BOOST_RAW: https://github.com/Unsigned-Long/ti_mmwave_rospkg.git
+    #   2. AWR1843BOOST_CUSTOM: https://github.com/Unsigned-Long/ti_mmwave_rospkg.git
+    #   3. ...
+    RadarMsgType: AWR1843BOOST_RAW
+    OutputPath: /home/csl/ros_ws/river/src/river/dataset/simu-low-dynamic
+    CalibParam:
+      SO3_RtoB:
+        qx: 0.0
+        qy: 0.0
+        qz: 0.0
+        qw: 1.0
+      POS_RinB:
+        r0c0: 0.05
+        r1c0: 0.10
+        r2c0: 0.15
+      TIME_OFFSET_RtoB: 0.01
+  Prior:
+    GravityNorm: 9.80
+    # todo: select reasonable knot distance for all splines
+    SO3SplineKnotDist: 0.03
+    VelSplineKnotDist: 0.02
+    AcceWeight: 10.00
+    # velocity random walk for acceleration bias: (m/s^3/sqrt(hz))
+    AcceBiasRandomWalk: 4.0E-4
+    # gyroscope noise density: (rad/s/sqrt(hz)), inverse value would be the weight
+    GyroWeight: 50.00
+    # angle random walk for gyroscope bias: (rad/s^2/sqrt(hz))
+    GyroBiasRandomWalk: 2.0E-5
+    # radar velocity noise: m/s, inverse value would be the weight
+    RadarWeight: 50.00
+    CauchyLossForRadarFactor: 0.1
+  Preference:
+    IMUMsgQueueSize: 400
+    RadarMsgQueueSize: 200
+    # the rate of incremental optimization
+    IncrementalOptRate: 50
+    ObjFileForDisplay: /home/csl/ros_ws/river/src/river/model/river.obj
+    OutputResultsWithTimeAligned: false
+    #  true: visualize the linear velocity in body frame
+    # false: visualize the linear velocity in world frame
+    VisualizeVelocityInBody: false

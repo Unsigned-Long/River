@@ -1,0 +1,80 @@
+Configor:
+  DataStream:
+    IMUTopic: /sensor_platform/imu
+    # Supported IMU message types are:
+    #   1. SENSOR_IMU: https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html
+    #   2. SBG_IMU: https://github.com/SBG-Systems/sbg_ros_driver.git
+    #   3. ...
+    IMUMsgType: SENSOR_IMU
+    #    RadarTopic: /sensor_platform/radar_center/scan
+#    RadarTopic: /sensor_platform/radar_left/scan
+    RadarTopic: /sensor_platform/radar_right/scan
+    # Supported radar message types are:
+    #   1.    AWR1843BOOST_RAW: https://github.com/Unsigned-Long/ti_mmwave_rospkg.git
+    #   2. AWR1843BOOST_CUSTOM: https://github.com/Unsigned-Long/ti_mmwave_rospkg.git
+    #   3.    POINTCLOUD2_XRIO: https://github.com/christopherdoer/rio.git
+    #   4. ...
+    RadarMsgType: POINTCLOUD2_XRIO
+    OutputPath: /home/csl/ros_ws/river/src/river/dataset/xrio/office_floor
+    CalibParam:
+      # center
+      #      SO3_RtoB:
+      #        qx: 0.012232553
+      #        qy: -0.012447937
+      #        qz: -0.713141818
+      #        qw: 0.700802512
+      #      POS_RinB:
+      #        r0c0: 0.04
+      #        r1c0: 0.03
+      #        r2c0: -0.03
+      # left
+      #      SO3_RtoB:
+      #        qx: -0.375911740
+      #        qy: -0.926396543
+      #        qz: 0.008806956
+      #        qw: 0.020056093
+      #      POS_RinB:
+      #        r0c0: 0.02
+      #        r1c0: 0.11
+      #        r2c0: 0.07
+      # right
+      SO3_RtoB:
+        qx: -0.9253772
+        qy: -0.3732611
+        qz: 0.03257329
+        qw: 0.0573764
+      POS_RinB:
+        r0c0: 0.05
+        r1c0: -0.04
+        r2c0: 0.04
+      TIME_OFFSET_RtoB: 0.0
+  Prior:
+    GravityNorm: 9.8
+    # todo: select reasonable knot distance for all splines
+    # if the radar measurements are poor, use larger knot distance
+    SO3SplineKnotDist: 0.03
+    VelSplineKnotDist: 0.02
+    # acceleration noise density: 5.880E-4 (m/s^2/sqrt(hz))
+    # inverse value would be the weight, i.e., (1.0/5.880E-4) = 1700.68
+    AcceWeight: 170.68
+    # velocity random walk for acceleration bias: (m/s^3/sqrt(hz))
+    AcceBiasRandomWalk: 4.0E-4
+    # gyroscope noise density: 1.745E-4 (rad/s/sqrt(hz))
+    # inverse value would be the weight, i.e., (1.0/1.745E-4) = 5730.66
+    GyroWeight: 573.66
+    # angle random walk for gyroscope bias: (rad/s^2/sqrt(hz))
+    GyroBiasRandomWalk: 2.0E-5
+    # radar velocity noise: 2E-3 m/s
+    # inverse value would be the weight, i.e., (1.0/0.02) = 50.00
+    RadarWeight: 500.00
+    CauchyLossForRadarFactor: 0.1
+  Preference:
+    IMUMsgQueueSize: 400
+    RadarMsgQueueSize: 200
+    # the rate of incremental optimization
+    IncrementalOptRate: 50
+    ObjFileForDisplay: /home/csl/ros_ws/river/src/river/model/river.obj
+    OutputResultsWithTimeAligned: false
+    #  true: visualize the linear velocity in body frame
+    # false: visualize the linear velocity in world frame
+    VisualizeVelocityInBody: false
