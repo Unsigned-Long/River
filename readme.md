@@ -12,7 +12,18 @@ If you use ***River*** in a scientific publication, please cite the following  p
 # todo...
 ```
 
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
+<div align='center'><font size='5' color='red'><b><i>News</i></b></font></div>
 
+Considering the lack of an open-source radar-inertial spatiotemporal calibrator currently, we also developed a **targetless spatiotemporal calibrator for multiple radars and IMUs**, termed as **RIs-Calib**, which 
+
++ supports one-shot multi-radar multiIMU spatial and temporal determination;
++ not require any additional artificial infrastructure or prior knowledge;
++ capable of accurate and consistent calibration;
+
+The GitHub repository of **RIs-Calib** now is available at [https://github.com/Unsigned-Long/RIs-Calib.git](https://github.com/Unsigned-Long/RIs-Calib.git), which contains all source code and mathematics documentation in implementations. [Demo video](https://youtu.be/CoOjn-9c4Dc) of **RIs-Calib** is also available.
+
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
 ## 1. Overview
 
