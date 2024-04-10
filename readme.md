@@ -14,6 +14,7 @@ If you use ***River*** in a scientific publication, please cite the following  p
 
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 <div align='center'><font size='5' color='red'><b><i>News</i></b></font></div>
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
 Considering the lack of an open-source radar-inertial spatiotemporal calibrator currently, we also developed a **targetless spatiotemporal calibrator for multiple radars and IMUs**, termed as **RIs-Calib**, which 
 
@@ -23,13 +24,13 @@ Considering the lack of an open-source radar-inertial spatiotemporal calibrator 
 
 The GitHub repository of **RIs-Calib** now is available at [https://github.com/Unsigned-Long/RIs-Calib.git](https://github.com/Unsigned-Long/RIs-Calib.git), which contains all source code and mathematics documentation in implementations. [Demo video](https://youtu.be/CoOjn-9c4Dc) of **RIs-Calib** is also available.
 
-<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-
 ## 1. Overview
 
 Continuous and reliable ego-velocity information is significant for high-performance motion control and planning in a variety of robotic tasks, such as autonomous navigation and exploration. While linear velocities as first-order kinematics can be simultaneously estimated with other states or explicitly obtained by differentiation from positions in ego-motion estimators such as odometers, the high coupling leads to instability and even failures when estimators degenerate. To this end, we present `River`: an accurate and continuous linear velocity estimator that efficiently fuses high-frequency inertial and radar target measurements based on continuous-time optimization. Specifically, a dynamic initialization procedure is first performed to rigorously recover the initials of states, followed by batch estimations, where the velocity and rotation B-splines would be optimized incrementally to provide continuous body-frame velocity estimates. Results from both simulated and real-world experiments demonstrate that `River` is capable of high accuracy, repeatability, and consistency for ego-velocity estimation. We open-source our implementations here to benefit the research community.
 
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 <div align='center'><font size='5' color='red'><b><i>Demo Video for River</i></b></font></div>
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
 Our accompanying videos are now available on **YouTube** (click below images to open) and [Bilibili](https://www.bilibili.com/video/BV15D421W7NX/).
 
