@@ -543,7 +543,7 @@ namespace ns_river {
 
             for (const auto &item: paramBlockVec) { this->SetManifold(item, QUATER_MANIFOLD.get()); }
 
-            if (!RiverOptOption::IsOptionWith(RiverOpt::OPT_VEL, option)) {
+            if (!RiverOptOption::IsOptionWith(RiverOpt::OPT_SO3, option)) {
                 for (auto &knot: paramBlockVec) { this->SetParameterBlockConstant(knot); }
             }
         }
