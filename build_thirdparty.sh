@@ -19,8 +19,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # shellcheck disable=SC2046
-RVIER_ROOT_PATH=$(cd $(dirname $0) || exit; pwd)
-echo "the root path of 'RIs-Calib': ${RVIER_ROOT_PATH}"
+RIVER_ROOT_PATH=$(cd $(dirname $0) || exit; pwd)
+echo "the root path of 'RIs-Calib': ${RIVER_ROOT_PATH}"
 
 # build tiny-viewer
 echo "----------------------------------"
@@ -28,7 +28,7 @@ echo "build thirdparty: 'tiny-viewer'..."
 echo "----------------------------------"
 
 # shellcheck disable=SC2164
-cd ${RVIER_ROOT_PATH}/thirdparty/ctraj
+cd ${RIVER_ROOT_PATH}/thirdparty/ctraj
 
 chmod +x build_thirdparty.sh
 ./build_thirdparty.sh
@@ -38,9 +38,9 @@ echo "----------------------------"
 echo "build thirdparty: 'ctraj'..."
 echo "----------------------------"
 
-mkdir ${RVIER_ROOT_PATH}/thirdparty/ctraj-build
+mkdir ${RIVER_ROOT_PATH}/thirdparty/ctraj-build
 # shellcheck disable=SC2164
-cd "${RVIER_ROOT_PATH}"/thirdparty/ctraj-build
+cd "${RIVER_ROOT_PATH}"/thirdparty/ctraj-build
 
 cmake ../ctraj
 echo current path: $PWD
@@ -48,4 +48,4 @@ echo "-----------------------"
 echo "start making 'ctraj'..."
 echo "-----------------------"
 make -j8
-cmake --install . --prefix ${RVIER_ROOT_PATH}/thirdparty/ctraj-install
+cmake --install . --prefix ${RIVER_ROOT_PATH}/thirdparty/ctraj-install
