@@ -42,6 +42,10 @@ namespace ns_river {
 
     void Viewer::RunViewer() {
         this->RunInMultiThread();
+        while (!this->IsActive()) {
+            spdlog::warn("waiting multi-thread tiny-viewer active...");
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
         spdlog::info("'Viewer::RunViewer' has been booted, thread id: {}.", RIVER_TO_STR(std::this_thread::get_id()));
 
         ros::Rate rate(configor->preference.IncrementalOptRate);

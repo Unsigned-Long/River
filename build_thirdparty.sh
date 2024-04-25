@@ -27,16 +27,11 @@ echo "----------------------------------"
 echo "build thirdparty: 'tiny-viewer'..."
 echo "----------------------------------"
 
-mkdir ${RVIER_ROOT_PATH}/thirdparty/ctraj/thirdparty/tiny-viewer-build
 # shellcheck disable=SC2164
-cd "${RVIER_ROOT_PATH}"/thirdparty/ctraj/thirdparty/tiny-viewer-build
+cd ${RVIER_ROOT_PATH}/thirdparty/ctraj
 
-cmake ../tiny-viewer
-echo current path: $PWD
-echo "-----------------------------"
-echo "start making 'tiny-viewer'..."
-echo "-----------------------------"
-make -j8
+chmod +x build_thirdparty.sh
+./build_thirdparty.sh
 
 # build ctraj
 echo "----------------------------"
@@ -53,3 +48,4 @@ echo "-----------------------"
 echo "start making 'ctraj'..."
 echo "-----------------------"
 make -j8
+cmake --install . --prefix ${RVIER_ROOT_PATH}/thirdparty/ctraj-install

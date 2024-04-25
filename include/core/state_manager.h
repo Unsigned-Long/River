@@ -9,7 +9,7 @@
 #include <utility>
 #include "core/data_manager.h"
 #include "core/estimator.h"
-#include "ctraj/factors/marginalization_factor.h"
+#include "ctraj/factor/marginalization_factor.h"
 #include "core/status.h"
 #include "core/bias_filter.h"
 
@@ -35,7 +35,7 @@ namespace ns_river {
 
             StatePack();
 
-            Eigen::Vector3d LIN_VEL_CurToRefInCur() const;
+            [[nodiscard]] Eigen::Vector3d LIN_VEL_CurToRefInCur() const;
 
         public:
             template<class Archive>

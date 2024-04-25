@@ -4,6 +4,7 @@
 .vscode
 
 /thirdparty/ctraj-build/
+/thirdparty/ctraj-install/
 /thirdparty/ctraj/thirdparty/tiny-viewer-build/
 
 /cmake-build-debug
