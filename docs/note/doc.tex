@@ -421,7 +421,7 @@
 	\qquad
 	\theta=\sqrt{\left( \theta_x\right) ^2+\left( \theta_y\right) ^2+\left( \theta_z\right) ^2}
 	\end{equation}
-	于是对于右扰动模型(VINS-Mono使用的，Ceres使用的)，有：
+	于是对于右扰动模型(VINS-Mono使用的，Sophus使用的)，有：
 	\begin{equation}
 	\boldsymbol{q}=\boldsymbol{q}\circ\delta\boldsymbol{q}=\mathcal{L}(\boldsymbol{q})\cdot\begin{bmatrix}
 	\begin{aligned}
@@ -434,27 +434,27 @@
 	\boldsymbol{I}_3&\boldsymbol{0}_3
 	\end{pmatrix}^\top=
 	\frac{1}{2}\cdot\left( \begin{array}{ccc}
-	q_w&q_z&-q_y\\
-	-q_z&q_w&q_x\\
-	q_y&-q_x&q_w\\
-	\hline
-	-q_x&-q_y&-q_z
+		q_w&-q_z&q_y\\
+		q_z&q_w&-q_x\\
+		-q_y&q_x&q_w\\
+		\hline
+		-q_x&-q_y&-q_z
 	\end{array}\right)
 	\end{equation}
 	其中$\mathcal{L}\left(\boldsymbol{q} \right)$为$\boldsymbol{q}$对应的左乘矩阵：
 	\begin{equation}
 	\mathcal{L}\left(\boldsymbol{q} \right)=\begin{pmatrix}
-	q_w\cdot\boldsymbol{I}_3-\liehat{\boldsymbol{q}_v}&\boldsymbol{q}_v\\
+	q_w\cdot\boldsymbol{I}_3+\liehat{\boldsymbol{q}_v}&\boldsymbol{q}_v\\
 	-\boldsymbol{q}_v^\top&q_w
 	\end{pmatrix}=\left( \begin{array}{ccc|c}
-	q_w&q_z&-q_y&q_x\\
-	-q_z&q_w&q_x&q_y\\
-	q_y&-q_x&q_w&q_z\\
+	q_w&-q_z&q_y&q_x\\
+	q_z&q_w&-q_x&q_y\\
+	-q_y&q_x&q_w&q_z\\
 	\hline
 	-q_x&-q_y&-q_z&q_w
 	\end{array}\right) 
 	\end{equation}
-	同样可以推到得到左扰动模型导数为(Sophus使用的)：
+	同样可以推到得到左扰动模型导数为(Ceres使用的)：
 	\begin{equation}
 	\boldsymbol{q}=\delta\boldsymbol{q}\circ\boldsymbol{q}=\mathcal{R}(\boldsymbol{q})\cdot\begin{bmatrix}
 	\begin{aligned}
@@ -467,11 +467,11 @@
 		\boldsymbol{I}_3&\boldsymbol{0}_3
 		\end{pmatrix}^\top=
 		\frac{1}{2}\cdot\left( \begin{array}{ccc}
-		q_w&-q_z&q_y\\
-		q_z&q_w&-q_x\\
-		-q_y&q_x&q_w\\
-		\hline
-		-q_x&-q_y&-q_z
+			q_w&q_z&-q_y\\
+			-q_z&q_w&q_x\\
+			q_y&-q_x&q_w\\
+			\hline
+			-q_x&-q_y&-q_z
 		\end{array}\right)
 	\end{equation}
 
