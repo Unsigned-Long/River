@@ -68,12 +68,11 @@ Our accompanying videos are now available on **YouTube** (click below images to 
 
 + install `spdlog`:
 
-  see the `GitHub` Profile of **[spdlog](https://github.com/gabime/spdlog.git)** library, clone it, compile it, and install it.
+  see the `GitHub` Profile of **[spdlog](https://github.com/gabime/spdlog.git)** library, clone it, compile it, and install it. **Though this library can be installed by `sudo apt-get install libspdlog`, the version is too old to support `river`.**
 
-+ install `fmt`, `Cereal`, `spdlog`, `yaml-cpp`:
++ install `cereal`, `yaml-cpp`:
 
   ```bash
-  sudo apt-get install libfmt-dev
   sudo apt-get install libcereal-dev
   sudo apt-get install libyaml-cpp-dev
   ```
