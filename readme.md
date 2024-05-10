@@ -56,7 +56,7 @@ Our accompanying videos are now available on **YouTube** (click below images to 
 
 + install `Sophus`:
 
-  see the `GitHub` Profile of **[Sophus](https://github.com/strasdat/Sophus.git)** library, clone it, compile it, and install it. **Set option`SOPHUS_USE_BASIC_LOGGING` on when compile (cmake) the Sophus library, this would avoid to involve `fmt` logger dependency (as the following `spdlog` would use internal `fmt` too, which may lead to conflict).**
+  see the `GitHub` Profile of **[Sophus](https://github.com/strasdat/Sophus.git)** library, clone it, compile it, and install it. **Set option`SOPHUS_USE_BASIC_LOGGING` `ON` when compile (`cmake`) the Sophus library, this would avoid to involve `fmt` logger dependency (as the following `spdlog` would use internal `fmt` too, which may lead to conflict).**
 
 + install `magic-enum`:
 
@@ -68,7 +68,7 @@ Our accompanying videos are now available on **YouTube** (click below images to 
 
 + install `spdlog`:
 
-  see the `GitHub` Profile of **[spdlog](https://github.com/gabime/spdlog.git)** library, clone it, compile it, and install it. **Though this library can be installed by `sudo apt-get install libspdlog`, the version is too old to support `river`.**
+  see the `GitHub` Profile of **[spdlog](https://github.com/gabime/spdlog.git)** library, clone it, compile it, and install it. **Though this library can be installed by `sudo apt-get install libspdlog-dev`, the version is too old to support `river`, thus installing from the source is recommended.**
 
 + install `cereal`, `yaml-cpp`:
 
@@ -127,7 +127,7 @@ Our accompanying videos are now available on **YouTube** (click below images to 
 
 ## 3. Launch River
 
-**Attention**: to create a virtual reality (**VR**) perspective of the IMU (left window view in runtime), you have to change the model file path in configure field (`Preference::ObjFileForDispla`y) to `{root path}/river/model/river.obj`. For a better VR perspective, you can design your own simulation scenario using `Blender` and export it as an `obj` file, then pass it to the configure file.
+**Attention**: to create a virtual reality (**VR**) perspective of the IMU (left window view in runtime), you have to change the model file path in configure field (`Preference::ObjFileForDisplay`) to `{root path}/river/model/river.obj`. For a better VR perspective, you can design your own simulation scenario using `Blender` and export it as an `obj` file, then pass it to the configure file.
 
 ### 3.1 Simulation Test
 
