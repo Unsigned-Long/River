@@ -56,7 +56,7 @@ Our accompanying videos are now available on **YouTube** (click below images to 
 
 + install `Sophus`:
 
-  see the `GitHub` Profile of **[Sophus](https://github.com/strasdat/Sophus.git)** library, clone it, compile it, and install it.
+  see the `GitHub` Profile of **[Sophus](https://github.com/strasdat/Sophus.git)** library, clone it, compile it, and install it. **Set option`SOPHUS_USE_BASIC_LOGGING` on when compile (cmake) the Sophus library, this would avoid to involve `fmt` logger dependency (as the following `spdlog` would use internal `fmt` too, which may lead to conflict).**
 
 + install `magic-enum`:
 
