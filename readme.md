@@ -8,8 +8,19 @@
 
 If you use ***River*** in a scientific publication, please cite the following  paper :smile::
 
+*[IEEE RA-L 2024]* *[River: A Tightly-coupled Radar-inertial Velocity Estimator Based on Continuous-time Optimization](https://ieeexplore.ieee.org/document/10529532)*
+
 ```latex
-# todo...
+@ARTICLE{10529532,
+  author={Chen, Shuolong and Li, Xingxing and Li, Shengyu and Zhou, Yuxuan and Wang, Shiwen},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={River: A Tightly-coupled Radar-inertial Velocity Estimator Based on Continuous-time Optimization}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-8},
+  keywords={Estimation;Radar;Splines (mathematics);Radar measurements;Optimization;Velocity measurement;Sensors;Ego-velocity estimation;millimeter-wavelength radar;inertial measurement unit;continuous-time optimization},
+  doi={10.1109/LRA.2024.3400154}}
 ```
 
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
