@@ -16,9 +16,6 @@ If you use ***River*** in a scientific publication, please cite the following  p
   journal={IEEE Robotics and Automation Letters}, 
   title={River: A Tightly-coupled Radar-inertial Velocity Estimator Based on Continuous-time Optimization}, 
   year={2024},
-  volume={},
-  number={},
-  pages={1-8},
   keywords={Estimation;Radar;Splines (mathematics);Radar measurements;Optimization;Velocity measurement;Sensors;Ego-velocity estimation;millimeter-wavelength radar;inertial measurement unit;continuous-time optimization},
   doi={10.1109/LRA.2024.3400154}}
 ```
@@ -29,7 +26,7 @@ If you use ***River*** in a scientific publication, please cite the following  p
 
 Considering the lack of an open-source radar-inertial spatiotemporal calibrator currently, we also developed a **targetless spatiotemporal calibrator for multiple radars and IMUs**, termed as **RIs-Calib**, which 
 
-+ supports one-shot multi-radar multiIMU spatial and temporal determination;
++ supports one-shot multi-radar multi-IMU spatial and temporal determination;
 + not require any additional artificial infrastructure or prior knowledge;
 + capable of accurate and consistent calibration;
 
@@ -37,15 +34,22 @@ The GitHub repository of **RIs-Calib** now is available at [https://github.com/U
 
 ## 1. Overview
 
-Continuous and reliable ego-velocity information is significant for high-performance motion control and planning in a variety of robotic tasks, such as autonomous navigation and exploration. While linear velocities as first-order kinematics can be simultaneously estimated with other states or explicitly obtained by differentiation from positions in ego-motion estimators such as odometers, the high coupling leads to instability and even failures when estimators degenerate. To this end, we present `River`: an accurate and continuous linear velocity estimator that efficiently fuses high-frequency inertial and radar target measurements based on continuous-time optimization. Specifically, a dynamic initialization procedure is first performed to rigorously recover the initials of states, followed by batch estimations, where the velocity and rotation B-splines would be optimized incrementally to provide continuous body-frame velocity estimates. Results from both simulated and real-world experiments demonstrate that `River` is capable of high accuracy, repeatability, and consistency for ego-velocity estimation. We open-source our implementations here to benefit the research community.
+Continuous and reliable ego-velocity information is significant for high-performance motion control and planning in a variety of robotic tasks. While linear velocities as first-order kinematics can be simultaneously estimated with other states or explicitly obtained by differentiation from positions in ego-motion estimators such as odometers, the high coupling leads to instability and even failures when estimators degenerate. To this end, we present `River`: an accurate and continuous linear velocity estimator that efficiently fuses high-frequency inertial and radar target measurements based on continuous-time optimization.
 
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 <div align='center'><font size='5' color='red'><b><i>Demo Video for River</i></b></font></div>
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
-Our accompanying videos are now available on **YouTube** (click below images to open) and [Bilibili](https://www.bilibili.com/video/BV15D421W7NX/).
+Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2SuZ_s)** (click below images to open) and [Bilibili](https://www.bilibili.com/video/BV15D421W7NX/).
 
-[![RIs-Calib](docs/img/shot5.png)](https://youtu.be/bkavz2SuZ_s)
+<div align=center>
+<a href="https://youtu.be/bkavz2SuZ_s">
+    <img src="docs/img/shot5.png" alt="Photography Sharing" width='55%'/>
+</a>
+    <a href="https://youtu.be/bkavz2SuZ_s">
+    <img src="docs/img/suite.png" alt="Photography Sharing" width='43%'/>
+</a>
+</div>
 
 ## 2. Build River
 
