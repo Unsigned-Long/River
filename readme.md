@@ -21,7 +21,7 @@ If you use ***River*** in a scientific publication, please cite the following  p
 ```
 
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-<div align='center'><font size='5' color='red'><b><i>News</i></b></font></div>
+<div align='center'><font size='5' color='red'><b><i>News: Calibrate Your Radar-Inertial Sensor Suite</i></b></font></div>
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
 Considering the lack of an open-source radar-inertial spatiotemporal calibrator currently, we also developed a **targetless spatiotemporal calibrator for multiple radars and IMUs**, termed as **RIs-Calib**, which 
@@ -40,7 +40,7 @@ Continuous and reliable ego-velocity information is significant for high-perform
 <div align='center'><font size='5' color='red'><b><i>Demo Video for River</i></b></font></div>
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
-Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2SuZ_s)** (click below images to open) and [Bilibili](https://www.bilibili.com/video/BV15D421W7NX/).
+Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2SuZ_s)** (click below images to open) and **[Bilibili](https://www.bilibili.com/video/BV15D421W7NX/)**.
 
 <div align=center>
 <a href="https://youtu.be/bkavz2SuZ_s">
@@ -50,6 +50,15 @@ Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2
     <img src="docs/img/suite.png" alt="Photography Sharing" width='43%'/>
 </a>
 </div>
+
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
+<div align='center'><font size='5' color='red'><b><i>Task (Todo) List</i></b></font></div>
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
+
+- [x] [double free or corruption (out)](https://github.com/Unsigned-Long/River/issues/3) #3
+- [ ] handle standstill motion (stationary) case (directly quit estimator, currently).
+- [ ] support multi-radar multi-inertial velocity estimation.
+- [ ] support online radar-inertial calibration.
 
 ## 2. Build River
 
