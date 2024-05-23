@@ -42,6 +42,12 @@ namespace ns_river {
 
     void Viewer::RunViewer() {
         this->RunInMultiThread();
+        // waiting for the viewer active
+        // if (!this->WaitForActive(5000)) {
+        //     spdlog::warn("the viewer is still inactive after waiting for 5000 (ms), try to quit 'river'...");
+        //     LOCK_RIVER_STATUS
+        //     RiverStatus::StateManager::CurStatus |= RiverStatus::StateManager::Status::ShouldQuit;
+        // }
         while (!this->IsActive()) {
             spdlog::warn("waiting multi-thread tiny-viewer active...");
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
