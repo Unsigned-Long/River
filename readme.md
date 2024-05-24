@@ -6,42 +6,34 @@
 
 ## 0. Preliminaries
 
-If you use ***River*** in a scientific publication, please cite the following  paper :smile::
+If you use `River` in a scientific publication, please cite the following paper 👇:
+- **S. Chen**, X. Li*, S. Li, Y. Zhou and S. Wang, "River: A Tightly-Coupled Radar-Inertial Velocity Estimator Based on Continuous-Time Optimization," in IEEE Robotics and Automation Letters (RA-L), 2024. [[paper](https://ieeexplore.ieee.org/document/10529532)] [[code](https://github.com/Unsigned-Long/River)] [[video](https://www.bilibili.com/video/BV15D421W7NX/)]
 
-*[IEEE RA-L 2024]* *[River: A Tightly-coupled Radar-inertial Velocity Estimator Based on Continuous-time Optimization](https://ieeexplore.ieee.org/document/10529532)*
-
-```latex
-@ARTICLE{10529532,
-  author={Chen, Shuolong and Li, Xingxing and Li, Shengyu and Zhou, Yuxuan and Wang, Shiwen},
-  journal={IEEE Robotics and Automation Letters}, 
-  title={River: A Tightly-coupled Radar-inertial Velocity Estimator Based on Continuous-time Optimization}, 
-  year={2024},
-  keywords={Estimation;Radar;Splines (mathematics);Radar measurements;Optimization;Velocity measurement;Sensors;Ego-velocity estimation;millimeter-wavelength radar;inertial measurement unit;continuous-time optimization},
-  doi={10.1109/LRA.2024.3400154}}
-```
-
-<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-<div align='center'><font size='5' color='red'><b><i>News: Calibrate Your Radar-Inertial Sensor Suite</i></b></font></div>
-<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-
-Considering the lack of an open-source radar-inertial spatiotemporal calibrator currently, we also developed a **targetless spatiotemporal calibrator for multiple radars and IMUs**, termed as **RIs-Calib**, which 
+<p align="left">
+    <a href="https://github.com/Unsigned-Long/RIs-Calib.git"><strong>News: Calibrate Your Radar-Inertial Sensor Suite »</strong></a>
+</p> 
 
 + supports one-shot multi-radar multi-IMU spatial and temporal determination;
 + not require any additional artificial infrastructure or prior knowledge;
 + capable of accurate and consistent calibration;
 
-The GitHub repository of **RIs-Calib** now is available at [https://github.com/Unsigned-Long/RIs-Calib.git](https://github.com/Unsigned-Long/RIs-Calib.git), which contains all source code and mathematics documentation in implementations. [Demo video](https://youtu.be/CoOjn-9c4Dc) of **RIs-Calib** is also available.
+<p align="left">
+    <a><strong>Todo List »</strong></a>
+</p> 
+
+- [x] [double free or corruption (out) Issue #3](https://github.com/Unsigned-Long/River/issues/3) 
+- [ ] handle standstill motion (stationary) case (directly quit estimator, currently).
+- [ ] support multi-radar multi-inertial velocity estimation.
+- [ ] support online radar-inertial calibration.
 
 ## 1. Overview
 
 Continuous and reliable ego-velocity information is significant for high-performance motion control and planning in a variety of robotic tasks. While linear velocities as first-order kinematics can be simultaneously estimated with other states or explicitly obtained by differentiation from positions in ego-motion estimators such as odometers, the high coupling leads to instability and even failures when estimators degenerate. To this end, we present `River`: an accurate and continuous linear velocity estimator that efficiently fuses high-frequency inertial and radar target measurements based on continuous-time optimization.
 
-<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-<div align='center'><font size='5' color='red'><b><i>Demo Video for River</i></b></font></div>
-<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 
-Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2SuZ_s)** (click below images to open) and **[Bilibili](https://www.bilibili.com/video/BV15D421W7NX/)**.
+Our accompanying videos are now available on [YouTube](https://youtu.be/bkavz2SuZ_s) (click below images to open) and [Bilibili](https://www.bilibili.com/video/BV15D421W7NX/).
 
+<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
 <div align=center>
 <a href="https://youtu.be/bkavz2SuZ_s">
     <img src="docs/img/shot5.png" alt="Photography Sharing" width='55%'/>
@@ -52,13 +44,6 @@ Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2
 </div>
 
 <hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-<div align='center'><font size='5' color='red'><b><i>Task (Todo) List</i></b></font></div>
-<hr style=" height:4px;border:none;border-top:4px solid #8a589f;border-bottom:4px solid #f34b7d;" />
-
-- [x] [double free or corruption (out)](https://github.com/Unsigned-Long/River/issues/3) #3
-- [ ] handle standstill motion (stationary) case (directly quit estimator, currently).
-- [ ] support multi-radar multi-inertial velocity estimation.
-- [ ] support online radar-inertial calibration.
 
 ## 2. Build River
 
@@ -155,12 +140,12 @@ Our accompanying videos are now available on **[YouTube](https://youtu.be/bkavz2
 
 ### 3.1 Simulation Test
 
-[***simulation experiments (datasets, launch, result visualization)***](simu-expr.md)
+[***datasets, launch, result visualization***](simu-expr.md)
 
 
 ### 3.2 Real-world Experiments
 
-[***real-world experiments (datasets, launch, result visualization)***](real-world-expr.md)
+[***datasets, launch, result visualization***](real-world-expr.md)
 
 ### 3.3 Skip Tutorial
 
