@@ -131,6 +131,9 @@ Our accompanying videos are now available on [YouTube](https://youtu.be/bkavz2Su
 + compile `River`:
 
   ```bash
+  # generate the ros self-defined message: 'RiverState'
+  catkin_make river_generate_messages
+  # compile river package
   catkin_make -DCATKIN_WHITELIST_PACKAGES=""
   ```
 
