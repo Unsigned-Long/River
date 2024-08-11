@@ -10,12 +10,12 @@ If you use `River` in a scientific publication, please cite the following paper 
 - **S. Chen**, X. Li*, S. Li, Y. Zhou and S. Wang, "River: A Tightly-Coupled Radar-Inertial Velocity Estimator Based on Continuous-Time Optimization," in IEEE Robotics and Automation Letters (RA-L), 2024. [[paper](https://ieeexplore.ieee.org/document/10529532)] [[code](https://github.com/Unsigned-Long/River)] [[video](https://www.bilibili.com/video/BV15D421W7NX/)]
 
 <p align="left">
-    <a href="https://github.com/Unsigned-Long/RIs-Calib.git"><strong>News: Calibrate Your Radar-Inertial Sensor Suite »</strong></a>
+    :tada: <a href="https://github.com/Unsigned-Long/iKalibr.git"><strong>News: Using iKalibr To Calibrate Your Radar-Inertial Sensor Suite »</strong></a>
 </p> 
 
 + supports one-shot multi-radar multi-IMU spatial and temporal determination;
 + not require any additional artificial infrastructure or prior knowledge;
-+ capable of accurate and consistent calibration;
++ capable of accurate and consistent calibration, you can find `iKalibr` [here](https://github.com/Unsigned-Long/iKalibr.git);
 
 <p align="left">
     <a><strong>Todo List »</strong></a>
