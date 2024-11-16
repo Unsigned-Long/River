@@ -45,3 +45,10 @@
 
 /dataset/xrio/workshop/*
 !/dataset/xrio/workshop/config.yaml
+
+/docs/note/*
+!/docs/note/doc.tex
+!/docs/note/picins.sty
+!/docs/note/ShuolongChen_grey.jpg
+!/docs/note/whu_red.png
+!/docs/note/doc.pdf
